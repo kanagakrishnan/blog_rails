@@ -1,0 +1,9 @@
+<h1> A new Post </h1> 
+<%= form_tag "/posts" do %>
+  <label>name:</label><br/>
+  <%= text_field_tag(:name) %><br/>
+    <label>Comment:</label><br/>
+  <%= text_area_tag(:comment, "", size: "24x6") %><br/>
+  <%= hidden_field_tag 'blogid' , params[:blog_id] %><br/>
+  <%= submit_tag("create") %>
+<% end %>
